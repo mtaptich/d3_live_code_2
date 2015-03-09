@@ -42,14 +42,14 @@
     </section>
     <section>
         <h2> OMG Maps!</h2>
-        <p>With a little bit of practice, map making in d3.js can be as easy and intuitive as other GIS platforms. Maps serve many purposes in both research and outreach. They provide specific information about <a href="http://glimmer.rstudio.com/ramnathv/NYCBikeShare/" >particular locations</a>, can be be used to showcase <a href="http://snf-datasci-2013.herokuapp.com/#observe-gather" target="_blank">
+        <p>With a little bit of practice, map making in d3.js can be as easy and intuitive as other GIS platforms. Maps serve many purposes in both research and outreach. They provide specific information about <a href="http://glimmer.rstudio.com/ramnathv/NYCBikeShare/" >particular locations</a>, can be used to showcase <a href="http://snf-datasci-2013.herokuapp.com/#observe-gather" target="_blank">
         spatial patterns and relationships</a>, and give <a href="http://www.nytimes.com/interactive/2012/08/24/us/drought-crops.html?_r=0" target="_blank">
         context to the data presented</a>. There are a <a href="http://bost.ocks.org/mike/map/" target="_blank">
         few</a>  <a href="http://geoexamples.blogspot.com/2013/02/mapping-with-d3js-canvas-or-svg.html" target="_blank">
         approaches</a> to generate <a href="http://bl.ocks.org/mbostock/4342045" target="_blank">
         map</a>(<a href="http://bl.ocks.org/mbostock/4060606" target="_blank">s</a>) in d3.js, but we walk through some simple tips for beginners.</p> 
 
-        <p> Before we get started, let's return back to our <code>svg</code> example from <a href="http://mtaptich.github.io/d3_live_code_1/" target="_blank">Part 1</a> and add explore an addition functionality, <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform" target="_blank">transform</a>. Transforming allows you to redefine the coordinate system of the SVG elements. This is particularly useful in interactive mapping.</p>
+        <p> Before we get started, let's return back to our <code>svg</code> example from <a href="http://mtaptich.github.io/d3_live_code_1/" target="_blank">Part 1</a> and explore an addition functionality, <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform" target="_blank">transform</a>. Transforming allows you to redefine the coordinate system of the SVG elements. This is particularly useful in interactive mapping.</p>
 
         <div class="col-xs-12 well">
             <div class="row">
@@ -187,7 +187,7 @@
         
 
         <p>Geographic data files, such as <a href="http://en.wikipedia.org/wiki/Shapefile" target="_blank">shapefiles</a>, are too large to display and manipulate in internet browsers. For this reason, a large portion of your time creating a map will be retrieving and processing data. The d3.js library supports
-          <a href="https://github.com/mbostock/d3/wiki/Requests#convenience-methods" target="_blank">multiple data formats</a>, but the two most common used in examples you will find online are CSV and JSON.</p>
+          <a href="https://github.com/mbostock/d3/wiki/Requests#convenience-methods" target="_blank">multiple data formats</a>, but the two most commonly used are CSV and JSON.</p>
         <ul class="center-block">
           <li><a href="https://github.com/mbostock/d3/wiki/CSV" target="_black">CSV</a>
           </li>
@@ -211,7 +211,7 @@
             </div>
         </div>
 
-        <p>We will use the Topojson files and a map projection to <a href="http://bost.ocks.org/mike/example/" target="_blank">portray the surface of the earth</a> onto the x-y pixel coordinate system of our <code>svg</code>. Each dataset will have a unique geospatial scope, so selecting an appropriate projection to use is the first step. Here is an excellent list of the different projections provided in a <a href="https://github.com/d3/d3-geo-projection/tree/d3298df7fa2713b19929502aea7cc24efdf23ece" target="_blank">plugin</a> provided by <a href="https://www.jasondavies.com/" target="_blank">Jason Davies</a>, but many more are available.  </p>
+        <p>We will use the topojson files and a map projection to <a href="http://bost.ocks.org/mike/example/" target="_blank">portray the surface of the earth</a> onto the x-y pixel coordinate system of our <code>svg</code>. Each dataset will have a unique geospatial scope, so selecting an appropriate projection to use is the first step. Here is an excellent list of the different projections provided in a <a href="https://github.com/d3/d3-geo-projection/tree/d3298df7fa2713b19929502aea7cc24efdf23ece" target="_blank">plugin</a> by <a href="https://www.jasondavies.com/" target="_blank">Jason Davies</a>, but many more are available.  </p>
 
         <div class="col-xs-12 well" style="max-height: 700px; overflow:auto;">
             <div class="row">
@@ -843,7 +843,7 @@ d3.json("state_pol.json", function(error, us) { // passes an error and object va
                 </div>
             </div>
         </div>
-        <p> Now, let's add some data to this map! Download this CSV file listing the location of the top 150 ports in the United States, which was taken from the <a href="http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2014/index.html" target="_blank">National Transportation Atlas Database</a>. I converted the format from .shp to .csv because this more familiar data format among beginners. 
+        <p> Now, let's add some data to this map! Download <a href="http://mtaptich.github.io/d3_live_code_2/ports_major.csv">this</a> CSV file listing the location of the top 150 ports in the United States, which was taken from the <a href="http://www.rita.dot.gov/bts/sites/rita.dot.gov.bts/files/publications/national_transportation_atlas_database/2014/index.html" target="_blank">National Transportation Atlas Database</a>. I converted the original file from .shp to .csv using <code>ogr2ogr</code> because this is a more familiar data format among beginners. 
 
         <div class="col-xs-12 well">
             <div class="row">
@@ -951,7 +951,7 @@ function ready(error, us, ports){ // passes an error and object variables for th
             </div>
         </div>
 
-        <p> Finally, use the zoom function used in the first examples to allow users to inspect portions of our map with greater resolution.</p>
+        <p> Finally, add the zoom function used in the first examples to allow users to inspect portions of our map with greater resolution.</p>
 
         <div class="col-xs-12 well">
             <div class="row">
